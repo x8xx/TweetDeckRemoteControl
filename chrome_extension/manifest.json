@@ -1,0 +1,22 @@
+{
+  "name": "TweetDeck Remote Control",
+  "description": "Operate TweetDeck from CLI.",
+  "version": "0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "js": [
+        "content_script.js"
+      ],
+      "matches": [
+        "https://tweetdeck.twitter.com/*",
+        "https://x8xx.github.io/*"
+      ]
+    }
+  ]
+}
